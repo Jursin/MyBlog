@@ -66,7 +66,7 @@ const repoUrl = repositoryName ? `https://github.com/${username}/${repositoryNam
         <span class="text-lg font-bold gh-stars">
           <span class="loading loading-spinner loading-sm"></span>
         </span>
-        <span class="text-xs">Stars</span>
+        <span class="text-xs">星标</span>
       </div>
 
       <div class="flex flex-col items-center bg-base-200/70 rounded-lg p-3">
@@ -74,9 +74,7 @@ const repoUrl = repositoryName ? `https://github.com/${username}/${repositoryNam
         <span class="text-lg font-bold gh-forks">
           <span class="loading loading-spinner loading-sm"></span>
         </span>
-        <span class="text-xs">
-          {repositoryName ? "Forks" : "Repos"}
-        </span>
+        <span class="text-xs">复刻</span>
       </div>
 
       <div class="flex flex-col items-center bg-base-200/70 rounded-lg p-3">
@@ -84,9 +82,7 @@ const repoUrl = repositoryName ? `https://github.com/${username}/${repositoryNam
         <span class="text-lg font-bold gh-watchers">
           <span class="loading loading-spinner loading-sm"></span>
         </span>
-        <span class="text-xs">
-          {repositoryName ? "Watchers" : "Followers"}
-        </span>
+        <span class="text-xs">关注</span>
       </div>
     </div>
 
@@ -96,19 +92,19 @@ const repoUrl = repositoryName ? `https://github.com/${username}/${repositoryNam
           <div class="flex items-center gap-1">
             <Icon name="lucide:calendar" class="w-4 h-4" />
             <span class="gh-created">
-              Created: <span class="loading loading-spinner loading-xs" />
+              创建: <span class="loading loading-spinner loading-xs" />
             </span>
           </div>
           <div class="flex items-center gap-1">
             <Icon name="lucide:clock" class="w-4 h-4" />
             <span class="gh-updated">
-              Updated: <span class="loading loading-spinner loading-xs" />
+              更新: <span class="loading loading-spinner loading-xs" />
             </span>
           </div>
           <div class="flex items-center gap-1">
             <Icon name="lucide:git-branch" class="w-4 h-4" />
             <span class="gh-branch">
-              Default: <span class="loading loading-spinner loading-xs" />
+              默认分支: <span class="loading loading-spinner loading-xs" />
             </span>
           </div>
         </div>
@@ -138,7 +134,7 @@ const repoUrl = repositoryName ? `https://github.com/${username}/${repositoryNam
     <div class="card-actions justify-end mt-2">
       <a href={repoUrl} target="_blank" rel="noopener" class="btn btn-primary btn-sm gap-2">
         <Icon name="lucide:github" class="w-4 h-4" />
-        View on GitHub
+        在 GitHub 上查看
       </a>
     </div>
   </div>
@@ -392,15 +388,15 @@ const repoUrl = repositoryName ? `https://github.com/${username}/${repositoryNam
 
       // Update dates
       if (data.created_at) {
-        this.updateTextContent(".gh-created", `Created: ${this.formatDate(data.created_at)}`);
+        this.updateTextContent(".gh-created", `创建: ${this.formatDate(data.created_at)}`);
       }
 
       if (data.updated_at) {
-        this.updateTextContent(".gh-updated", `Updated: ${this.formatDate(data.updated_at)}`);
+        this.updateTextContent(".gh-updated", `更新: ${this.formatDate(data.updated_at)}`);
       }
 
       if (data.default_branch) {
-        this.updateTextContent(".gh-branch", `Default: ${data.default_branch}`);
+        this.updateTextContent(".gh-branch", `默认分支: ${data.default_branch}`);
       }
 
       // Update license
@@ -427,7 +423,7 @@ const repoUrl = repositoryName ? `https://github.com/${username}/${repositoryNam
     updateUserUI(data: any, totalStars: number) {
       // Update description
       const descEl = this.querySelector(".gh-description");
-      if (descEl) descEl.textContent = data.bio || `GitHub profile for ${data.login}`;
+      if (descEl) descEl.textContent = data.bio || `${data.login} 的 GitHub 资料`;
 
       // Update stats
       this.updateTextContent(".gh-stars", this.formatNumber(totalStars));
@@ -471,9 +467,9 @@ const repoUrl = repositoryName ? `https://github.com/${username}/${repositoryNam
       this.updateTextContent(".gh-watchers", "-");
 
       // Clear date loading indicators if they exist
-      this.updateTextContent(".gh-created", "Created: -");
-      this.updateTextContent(".gh-updated", "Updated: -");
-      this.updateTextContent(".gh-branch", "Default: -");
+      this.updateTextContent(".gh-created", "创建: -");
+      this.updateTextContent(".gh-updated", "更新: -");
+      this.updateTextContent(".gh-branch", "默认分支: -");
     }
 
     // Utility methods
@@ -493,7 +489,7 @@ const repoUrl = repositoryName ? `https://github.com/${username}/${repositoryNam
     }
 
     formatDate(dateString: string): string {
-      return new Date(dateString).toLocaleDateString("en-US", {
+      return new Date(dateString).toLocaleDateString("zh-CN", {
         year: "numeric",
         month: "short",
         day: "numeric",
