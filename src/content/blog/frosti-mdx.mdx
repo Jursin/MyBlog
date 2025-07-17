@@ -1,15 +1,13 @@
 ---
-title: Using mdx in Frosti 
-description: Using MDX in Frosti to enrich article content with more components
-pubDate: 07 12 2024
-image: /image/image2.jpg
+title: "在 Frosti 中使用 mdx"
+description: "使用 mdx 在 Frosti 中通过组件丰富文章内容"
+pubDate: "2024 7 12"
+image: /image/mdx.png
 categories:
-  - Documentation
-  - Examples
+  - 文档
+  - 示例
 tags:
-  - Frosti
-  - Blog
-  - Project
+  - mdx
 ---
 
 import Collapse from "../../components/mdx/Collapse.astro";
@@ -22,19 +20,19 @@ import Warning from "../../components/mdx/Warning.astro";
 import TimeLine from "../../components/mdx/TimeLine.astro";
 import LinkCard from "../../components/mdx/LinkCard.astro";
 
-## Preface
+## 前言
 
-This article describes how to use the components provided by Frosti in `mdx` to realize the functions that can't be realized by normal `md`.
+本文介绍如何在 `mdx` 中使用 Frosti 提供的组件，实现普通 `md` 无法实现的功能。
 
-## Main text
+## 正文
 
-### Getting started
+### 快速开始
 
-First you need to create an `mdx` file, which is as simple as changing the extension to `.mdx`.
+首先需要创建一个 `mdx` 文件，只需将扩展名改为 `.mdx` 即可。
 
-### Introducing
+### 引入组件
 
-The components provided by Frosti are placed in the `/mdx` folders. Write something under the document properties (frontmatter):
+Frosti 提供的组件都放在 `/mdx` 文件夹中。在文档属性 (frontmatter) 下方写入：
 
 ```astro
 import Collapse from "../../components/mdx/Collapse.astro";
@@ -48,21 +46,21 @@ import TimeLine from "../../components/mdx/TimeLine.astro";
 import LinkCard from "../../components/mdx/LinkCard.astro";
 ```
 
-### Example
+### 组件示例
 
-#### Collapse
+#### 折叠面板
 
-<Collapse title="This is an example text.">
-  This is the hidden content!
+<Collapse title="这是一个示例文本">
+  这是被隐藏的内容！
 </Collapse>
 
 ```astro
-<Collapse title="This is an example text.">
-  This is the hidden content!
+<Collapse title="这是一个示例文本">
+  这是被隐藏的内容！
 </Collapse>
 ```
 
-#### Diff
+#### 差异对比
 
 <Diff l="/image/l.png" r="/image/r.png" />
 
@@ -70,84 +68,84 @@ import LinkCard from "../../components/mdx/LinkCard.astro";
 <Diff l="/image/l.png" r="/image/r.png" />
 ```
 
-#### Error
+#### 错误提示
 
-<Error>Maybe something went wrong?</Error>
-
-```astro
-<Error>Maybe something went wrong? </Error>
-```
-
-#### Warning
-
-<Warning>Hey! Watch out for potholes! </Warning>
+<Error>可能出了些问题？</Error>
 
 ```astro
-<Warning>Hey! Watch out for potholes! </Warning>
+<Error>可能出了些问题？</Error>
 ```
 
-#### Message
+#### 警告提示
 
-<Info>It's just a message. </Info>
+<Warning>嘿！注意路面坑洞！</Warning>
 
 ```astro
-<Info>It's just a message. </Info>
+<Warning>嘿！注意路面坑洞！</Warning>
 ```
 
-#### Success
+#### 信息提示
 
-<Success>Congratulations on your successful deployment! </Success>
+<Info>这只是一条普通消息。</Info>
 
 ```astro
-<Success>Congratulations on your successful deployment! </Success>
+<Info>这只是一条普通消息。</Info>
 ```
 
-#### Kbd
+#### 成功提示
 
-<Kbd>Ctrl</Kbd> + <Kbd>C</Kbd> to copy the text.
+<Success>恭喜您部署成功！</Success>
 
 ```astro
-<Kbd>Ctrl</Kbd> + <Kbd>C</Kbd> to copy the text.
+<Success>恭喜您部署成功！</Success>
 ```
 
-#### TimeLine
+#### 键盘按键
+
+<Kbd>Ctrl</Kbd> + <Kbd>C</Kbd> 复制文本。
+
+```astro
+<Kbd>Ctrl</Kbd> + <Kbd>C</Kbd> 复制文本。
+```
+
+#### 时间轴
 
 <TimeLine
   items={[
-    { year: "1984", event: "First Macintosh computer" },
-    { year: "1998", event: "iMac" },
-    { year: "2001", event: "iPod" },
-    { year: "2007", event: "iPhone" },
-    { year: "2015", event: "Apple Watch" },
+    { year: "2010", event: "小米公司成立" },
+    { year: "2011", event: "小米手机 1 发布" },
+    { year: "2018", event: "小米在香港上市" },
+    { year: "2021", event: "小米宣布造车" },
+    { year: "2024", event: "小米 SU7 发布" },
   ]}
 />
 
 ```astro
 <TimeLine
   items={[
-    { year: "1984", event: "First Macintosh computer" },
-    { year: "1998", event: "iMac" },
-    { year: "2001", event: "iPod" },
-    { year: "2007", event: "iPhone" },
-    { year: "2015", event: "Apple Watch" },
+    { year: "2010", event: "小米公司成立" },
+    { year: "2011", event: "小米手机 1 发布" },
+    { year: "2018", event: "小米在香港上市" },
+    { year: "2021", event: "小米宣布造车" },
+    { year: "2024", event: "小米 SU7 发布" },
   ]}
 />
 ```
 
-#### LinkCard
+#### 链接卡片
 
 <LinkCard
-  title="Frosti"
-  desc="My blog project!"
-  url="https://github.com/EveSunMaple/Frosti"
-  img="/logo.png"
+  title="MyBlog"
+  desc="我的博客网站！"
+  url="https://blog.jursin.top"
+  img=""
 />
 
 ```astro
 <LinkCard
-  title="Frosti"
-  desc="My blog project!"
-  url="https://github.com/EveSunMaple/Frosti"
-  img="/logo.png"
+  title="MyBlog"
+  desc="我的博客网站！"
+  url="https://blog.jursin.top"
+  img=""
 />
 ```

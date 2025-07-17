@@ -9,7 +9,7 @@ site:
     light: winter # 主题的浅色模式
     dark: dracula # 主题的深色模式
     code: github-dark # 代码块的主题 https://shiki.style/themes
-  date_format: yyyy年 ooo dd日 aaa # 日期格式设置，支持自定义格式
+  date_format: YYYY年MM月DD日 # 日期格式设置，支持自定义格式
   blog: # 博客相关配置
     pageSize: 8 # 每页显示的文章数量
   menu: # 菜单配置
@@ -36,12 +36,12 @@ site:
           target: _self
         - id: documentation
           text: 文档
-          href: /blog/category/Documentation
+          href: /blog/category/文档
           svg: "material-symbols:unknown-document-outline-rounded"
           target: _self
         - id: examples
           text: 示例
-          href: /blog/category/Examples
+          href: /blog/category/示例
           svg: "material-symbols:deployed-code-outline"
           target: _self
         # 子菜单项配置
@@ -71,6 +71,10 @@ user:
         ariaLabel: BiliBili
         title: BiliBili
         svg: "ri:bilibili-line"
+      - href: "https://www.douyin.com/user/MS4wLjABAAAAQGQcpmhfTWT-dnMkBX1Dtdw4mqk-WUPiz1Stbb5nn7Q"
+        ariaLabel: Douyin
+        title: Douyin
+        svg: "ri:tiktok-line"
   footer:
     social:
       - href: "https://github.com/Jursin"
@@ -81,3 +85,7 @@ user:
         ariaLabel: BiliBili
         title: BiliBili
         svg: "ri:bilibili-line"
+      - href: "https://www.douyin.com/user/MS4wLjABAAAAQGQcpmhfTWT-dnMkBX1Dtdw4mqk-WUPiz1Stbb5nn7Q"
+        ariaLabel: Douyin
+        title: Douyin
+        svg: "ri:tiktok-line"
