@@ -1,6 +1,6 @@
 # 网站的基本信息
 site:
-  tab: Frosti # 浏览器标签栏上显示的文本
+  tab: Blog # 浏览器标签栏上显示的文本
   title: 💠 Jursin 的 Blog # 网站的标题
   description: 一个使用 Frosti 主题的博客 🚀 由 Astro 驱动
   language: zh
