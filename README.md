@@ -6,6 +6,7 @@
 <img alt="Frosti Logo" src="./public/logo.png" width="280px">
 
 [![Blog](https://img.shields.io/badge/%E7%BD%91%E7%AB%99-Blog-blue)](https://blog.jursin.top)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b97208eb-5cb4-4145-ab47-6a206330b46f/deploy-status)](https://app.netlify.com/projects/blog-of-jursin/deploys)
 [![license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/Jursin/MyBlog/blob/main/LICENSE)
 
 </div>
@@ -53,7 +54,6 @@
    pnpm run search:index
    ```
 
-   > [!tip]
    > 生成搜索索引以供开发时使用
 
    启动：
